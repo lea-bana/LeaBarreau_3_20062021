@@ -1,0 +1,21 @@
+body,
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+.home-restaurant {
+  background-color: $primary_color;
+
+  > h1 {
+    font-weight: bold;
+  }
+}

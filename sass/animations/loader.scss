@@ -1,0 +1,52 @@
+// Animation du body : overflow hidden vers initial
+@keyframes loaderbody {
+  0% {
+    overflow: hidden;
+    height: 100vh;
+  }
+  100% {
+    overflow: initial;
+    height: initial;
+  }
+}
+@-webkit-keyframes loaderbody {
+  0% {
+    overflow: hidden;
+    height: 100vh;
+  }
+  100% {
+    overflow: initial;
+    height: initial;
+  }
+}
+
+body {
+  overflow: initial;
+  height: initial;
+  animation-name: loaderbody;
+  animation-duration: 30000ms;
+}
+
+// Animation du modal loader : opacity 100% vers 0
+@keyframes loader-modal {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  animation: loader-modal 3000ms;
+}
+
+// Animation de l'icone du loader
