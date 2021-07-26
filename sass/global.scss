@@ -1,0 +1,10 @@
+@import "./variables";
+
+h1,
+h2,
+h3 {
+  color: $primary_color;
+}
+
+@import "./components/home-restaurant";
+@import "./animations/loader.scss";

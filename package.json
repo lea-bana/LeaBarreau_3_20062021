@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "reservation en ligne menus de restaurants",
+  "main": "index.js",
+  "scripts": {
+    "style:dev": "sass sass/global.scss build/style.css --watch",
+    "style:prod": "sass sass/global.scss build/style.css --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "léa Bana",
+  "license": "ISC"
+}
