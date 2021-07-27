@@ -40,15 +40,19 @@ body {
   }
 }
 @keyframes spinner-rotation {
-  from {
+  0% {
     transform: rotate(0deg);
     opacity: 0.7;
-    color: $color-primary;
-  }
-  to {
-    transform: rotate(360deg);
-    opacity: 0.5;
     color: $color-tertiary;
+  }
+  55% {
+    opacity: 0.6;
+    color: $color-secondary;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.6;
+    color: $color-primary;
   }
 }
 
