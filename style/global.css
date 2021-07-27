@@ -1,4 +1,36 @@
-// Animation du body : overflow hidden vers initial
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-family: Shrikhand;
+  font-size: 30px;
+  color: #000;
+}
+
+h2,
+h3 {
+  color: #9356dc;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+> h1 {
+  font-weight: bold;
+}
+
 @keyframes loaderbody {
   0% {
     overflow: hidden;
@@ -19,7 +51,6 @@
     height: initial;
   }
 }
-
 body {
   overflow: initial;
   height: initial;
@@ -27,7 +58,6 @@ body {
   animation-duration: 30000ms;
 }
 
-// Animation du modal loader : opacity 100% vers 0
 @keyframes loader-modal {
   0% {
     opacity: 1;
@@ -43,15 +73,14 @@ body {
   from {
     transform: rotate(0deg);
     opacity: 0.7;
-    color: $color-primary;
+    color: #9356dc;
   }
   to {
     transform: rotate(360deg);
     opacity: 0.5;
-    color: $color-tertiary;
+    color: #99e2d0;
   }
 }
-
 .loader {
   position: absolute;
   height: 100%;
@@ -67,11 +96,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  // Animation de l'icone du loader
-  &__itemContainer {
-    display: flex;
-    font-size: 150px;
-    animation: spinner-rotation infinite 4500ms ease-in-out;
-  }
 }
+.loader__itemContainer {
+  display: flex;
+  font-size: 150px;
+  animation: spinner-rotation infinite 4500ms ease-in-out;
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -1,9 +1,16 @@
 @import "./variables";
 
-h1,
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-family: Shrikhand;
+  font-size: 30px;
+  color: #000;
+}
+
 h2,
 h3 {
-  color: $primary_color;
+  color: $color-primary;
 }
 
 @import "./components/home-restaurant";
