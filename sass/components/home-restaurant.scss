@@ -20,17 +20,65 @@
   text-align: center;
   align-items: center;
   background-color: #fafafa;
-  margin-bottom: 60px;
 }
 .explo__btn {
-  @include button(primary);
+  @include button("");
 }
 
 .tuto {
   display: flex;
   padding: 2rem;
-  text-align: left;
   align-items: center;
   background-color: white;
   margin-bottom: 60px;
+}
+
+.container__tuto {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tuto__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+.tuto__step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+  &:hover {
+    background-color: #9356dc;
+    opacity: 0.3;
+  }
+}
+.tuto__step:before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -0.75rem;
+  &:hover {
+    opacity: 1;
+  }
+}
+.tuto__icon {
+  color: gray;
+  &:hover + :active {
+    color: #9356dc;
+  }
 }
