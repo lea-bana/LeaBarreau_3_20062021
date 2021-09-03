@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* homepage*/
 .header {
   display: flex;
   text-align: center;
@@ -21,8 +23,8 @@
   text-align: center;
   align-items: center;
   background-color: #fafafa;
+  /*bouton explorer*/
 }
-
 .explo__btn {
   border: 0;
   padding: 0.75rem 1.5rem;
@@ -48,42 +50,38 @@
   color: inherit;
 }
 
+/*le fonctionnement-->cliquable?*/
 .tuto {
   display: flex;
-  padding: 2rem;
+  padding: 2rem 1rem;
   align-items: center;
   background-color: white;
-  margin-bottom: 60px;
 }
-
-.container__tuto {
+.tuto__container {
   justify-content: center;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 .tuto__steps {
-  margin: 0;
-  padding: 0;
+  padding: 2rem 1rem;
   list-style: none;
   counter-reset: compteListe;
 }
-
 .tuto__step {
-  padding: 1.5rem;
+  height: 85px;
   margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
+  align-items: center;
   position: relative;
 }
 .tuto__step:hover {
   background-color: #9356dc;
   opacity: 0.3;
 }
-
 .tuto__step:before {
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
@@ -101,14 +99,77 @@
 .tuto__step:before:hover {
   opacity: 1;
 }
-
 .tuto__icon {
-  color: gray;
+  color: #7e7e7e;
+  margin-left: 30px;
 }
 .tuto__icon:hover + :active {
   color: #9356dc;
 }
 
+/*les pages de restaurants*/
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.card__badge {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.card__content {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__txt {
+  flex: 1;
+}
+.card__title {
+  margin: unset;
+}
+.card__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes loaderbody {
   0% {
     overflow: hidden;
@@ -145,6 +206,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes spinner-rotation {
@@ -167,7 +229,6 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
   animation: loader-modal 3000ms;
   left: 0;
   top: 0;
@@ -182,7 +243,164 @@ body {
 .loader__itemContainer {
   display: flex;
   font-size: 150px;
-  animation: spinner-rotation infinite 4500ms ease-in-out;
+  animation: spinner-rotation infinite 2500ms ease-in-out;
+}
+
+.header__arrow {
+  position: absolute;
+  left: 8%;
+  top: 40%;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.heroImg {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+  /*Résoudre le pb du btn like*/
+}
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  font-family: "Shrikhand", "cursive";
+}
+.menu__like {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.menu__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+.menu__btn:hover {
+  opacity: 1;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+}
+
+/*fin du btn like- pb à résoudre*/
+.submenu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+.submenu__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menuItem {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
+}
+.menuItem__header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menuItem__title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuItem__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuItem__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.menuItem__confirmation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem__confirmation {
+  margin-right: -1rem;
+}
+.menuItem__wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem__wrapIcon {
+  transform: rotate(0);
+}
+.menuItem__icon {
+  color: #99e2d0;
+  margin-left: 10px;
 }
 
 html,
@@ -195,14 +413,18 @@ body {
 }
 
 h1 {
-  font-family: Shrikhand, "cursive";
+  font-family: "shrikhand", sans-serif;
   text-align: center;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 h2 {
   color: black;
+  font-weight: bolder;
+}
+
+h3 {
   font-weight: bolder;
 }
 
@@ -218,6 +440,39 @@ p {
 .fas {
   font-weight: 900;
   padding-right: 12px;
+}
+
+/*footer ttes pages confondues*/
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__listElement {
+  color: white;
+  padding: 0.3rem;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

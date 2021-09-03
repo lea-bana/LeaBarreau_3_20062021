@@ -37,6 +37,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes spinner-rotation {
@@ -60,7 +61,6 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
   animation: loader-modal 3000ms;
   left: 0;
   top: 0;
@@ -76,6 +76,6 @@ body {
   &__itemContainer {
     display: flex;
     font-size: 150px;
-    animation: spinner-rotation infinite 4500ms ease-in-out;
+    animation: spinner-rotation infinite 2500ms ease-in-out;
   }
 }

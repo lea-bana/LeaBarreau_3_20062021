@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./components/home-restaurant";
 @import "./animations/loader.scss";
+@import "./components/pages-restaurants.scss";
+@import "./animations/menu-restaurants.scss";
 
 html,
 body {
@@ -12,14 +14,17 @@ body {
 }
 
 h1 {
-  font-family: Shrikhand, "cursive";
+  font-family: "shrikhand", sans-serif;
   text-align: center;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 h2 {
   color: black;
+  font-weight: bolder;
+}
+h3 {
   font-weight: bolder;
 }
 
@@ -35,4 +40,43 @@ p {
 .fas {
   font-weight: 900;
   padding-right: 12px;
+}
+
+/*footer ttes pages confondues*/
+
+.footer {
+  background-color: #353535;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: $appPadding;
+  }
+
+  &__logo {
+    color: white;
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: $appPadding;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__listElement {
+    color: white;
+    padding: 0.3rem;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

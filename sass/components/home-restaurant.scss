@@ -1,3 +1,4 @@
+/* homepage*/
 .header {
   display: flex;
   text-align: center;
@@ -20,65 +21,136 @@
   text-align: center;
   align-items: center;
   background-color: #fafafa;
+
+  /*bouton explorer*/
+
+  &__btn {
+    @include button("");
+  }
 }
-.explo__btn {
-  @include button("");
-}
+/*le fonctionnement-->cliquable?*/
 
 .tuto {
   display: flex;
-  padding: 2rem;
+  padding: ($appPadding + 1rem) $appPadding;
   align-items: center;
+
   background-color: white;
-  margin-bottom: 60px;
+
+  &__container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__steps {
+    padding: ($appPadding + 1rem) $appPadding;
+    list-style: none;
+    counter-reset: compteListe;
+  }
+
+  &__step {
+    height: 85px;
+    margin: 1rem 0 1rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:hover {
+      background-color: #9356dc;
+      opacity: 0.3;
+    }
+  }
+  &__step:before {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -0.75rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__icon {
+    color: #7e7e7e;
+    margin-left: 30px;
+    &:hover + :active {
+      color: #9356dc;
+    }
+  }
 }
 
-.container__tuto {
-  justify-content: center;
+/*les pages de restaurants*/
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: ($appPadding + 1rem) $appPadding;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cards {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  row-gap: 2rem;
 }
-
-.tuto__steps {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: compteListe;
-}
-.tuto__step {
-  padding: 1.5rem;
-  margin: 1rem 0 1rem 0.75rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-  border-radius: 1.25rem;
-  background-color: #f6f6f6;
-  display: flex;
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
   position: relative;
-  &:hover {
-    background-color: #9356dc;
-    opacity: 0.3;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  &__img {
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
   }
-}
-.tuto__step:before {
-  counter-increment: compteListe 1;
-  content: counter(compteListe) " ";
-  background: #9356dc;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  left: -0.75rem;
-  &:hover {
-    opacity: 1;
+  &__badge {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
   }
-}
-.tuto__icon {
-  color: gray;
-  &:hover + :active {
-    color: #9356dc;
+  &__content {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__txt {
+    flex: 1;
+  }
+  &__title {
+    margin: unset;
+  }
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
   }
 }
