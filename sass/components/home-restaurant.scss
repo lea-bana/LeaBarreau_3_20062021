@@ -28,7 +28,6 @@
     @include button("");
   }
 }
-/*le fonctionnement-->cliquable?*/
 
 .tuto {
   display: flex;
@@ -59,10 +58,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    &:hover {
-      background-color: #9356dc;
-      opacity: 0.3;
-    }
   }
   &__step:before {
     counter-increment: compteListe 1;
@@ -150,5 +145,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+.btn_like_icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 20px;
+  &:hover {
+    animation: animheart 0.4s;
+    overflow: hidden;
   }
 }

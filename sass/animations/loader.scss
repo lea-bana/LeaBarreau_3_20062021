@@ -24,7 +24,7 @@ body {
   overflow: initial;
   height: initial;
   animation-name: loaderbody;
-  animation-duration: 30000ms;
+  animation-duration: 20000ms;
 }
 
 // Animation du modal loader : opacity 100% vers 0
@@ -61,11 +61,11 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: loader-modal 3000ms;
+  animation: loader-modal 3500ms;
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  animation-delay: 1.55s;
+  animation-delay: 1.3s;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
@@ -76,6 +76,6 @@ body {
   &__itemContainer {
     display: flex;
     font-size: 150px;
-    animation: spinner-rotation infinite 2500ms ease-in-out;
+    animation: spinner-rotation infinite 4500ms ease-in-out;
   }
 }
