@@ -79,3 +79,14 @@ p {
     }
   }
 }
+/*media queries footers */
+
+@media all and (min-width:1024px) {
+  .footer__list {
+    display:flex;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

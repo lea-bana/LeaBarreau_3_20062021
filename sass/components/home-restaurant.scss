@@ -33,8 +33,11 @@
   display: flex;
   padding: ($appPadding + 1rem) $appPadding;
   align-items: center;
-
   background-color: white;
+  &__icon {
+    padding-left: 20px;
+    color: gray;
+  }
 
   &__container {
     justify-content: center;
@@ -76,11 +79,28 @@
       opacity: 1;
     }
   }
-  &__icon {
-    color: #7e7e7e;
-    margin-left: 30px;
-    &:hover + :active {
-      color: #9356dc;
+}
+
+/*media queries pour les tutos*/
+
+@media all and (min-width: 1024px) {
+  .tuto {
+    display: flex;
+    padding: ($appPadding + 1rem) $appPadding;
+    align-items: center;
+    background-color: white;
+
+    &__icon {
+      padding-left: 20px;
+      color: gray;
+    }
+
+    &__steps {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__step {
+      width: 28%;
     }
   }
 }
@@ -114,6 +134,7 @@
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
     object-fit: cover;
+    margin: unset;
   }
   &__badge {
     background-color: $color-tertiary;
@@ -153,7 +174,19 @@
   transition: 0.4s;
   width: 20px;
   &:hover {
-    animation: animheart 0.4s;
+    animation: animheart 2s forwards;
     overflow: hidden;
+  }
+}
+/*media queries restaurants cards*/
+
+@media all and (min-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card {
+    width: 22%;
   }
 }

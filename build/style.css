@@ -56,6 +56,10 @@
   align-items: center;
   background-color: white;
 }
+.tuto__icon {
+  padding-left: 20px;
+  color: gray;
+}
 .tuto__container {
   justify-content: center;
   display: flex;
@@ -94,14 +98,27 @@
 .tuto__step:before:hover {
   opacity: 1;
 }
-.tuto__icon {
-  color: #7e7e7e;
-  margin-left: 30px;
-}
-.tuto__icon:hover + :active {
-  color: #9356dc;
-}
 
+/*media queries pour les tutos*/
+@media all and (min-width: 1024px) {
+  .tuto {
+    display: flex;
+    padding: 2rem 1rem;
+    align-items: center;
+    background-color: white;
+  }
+  .tuto__icon {
+    padding-left: 20px;
+    color: gray;
+  }
+  .tuto__steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tuto__step {
+    width: 28%;
+  }
+}
 /*les pages de restaurants*/
 .restaurants {
   background-color: #f6f6f6;
@@ -133,6 +150,7 @@
   border-radius: 1rem 1rem 0 0;
   box-shadow: none;
   object-fit: cover;
+  margin: unset;
 }
 .card__badge {
   background-color: #99e2d0;
@@ -173,10 +191,22 @@
   width: 20px;
 }
 .btn_like_icon:hover {
-  animation: animheart 0.4s;
+  animation: animheart 2s forwards;
   overflow: hidden;
 }
 
+/*media queries restaurants cards*/
+@media all and (min-width: 1024px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 22%;
+  }
+}
 @keyframes loaderbody {
   0% {
     overflow: hidden;
@@ -307,18 +337,6 @@ body {
   justify-content: center;
   cursor: pointer;
   position: relative;
-  background-color: black;
-}
-.menu__btn:hover {
-  opacity: 1;
-  transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
 }
 
 /*fin du btn like- pb à résoudre*/
@@ -343,6 +361,13 @@ body {
   bottom: 0;
 }
 
+/*media queries presentation du menu en desktop*/
+@media all and (min-width: 1024px) {
+  .submenus {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .menuItem {
   background-color: white;
   padding: 1rem;
@@ -499,15 +524,15 @@ body {
 @keyframes animheart {
   0% {
     transform: scale(1);
-    color: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    color: #9356dc;
   }
   40% {
-    transform: scale(1.3);
-    color: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    transform: scale(1.4);
+    color: linear-gradient(to top #9356dc, #ff79da);
   }
   100% {
-    transform: scale(1);
-    color: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+    transform: scale(1.4);
+    color: #ff79da;
   }
 }
 html,
@@ -579,6 +604,17 @@ p {
 }
 .footer__link:hover {
   text-decoration: underline;
+}
+
+@media all and (min-width: 1024px) {
+  .footer__list {
+    display: flex;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

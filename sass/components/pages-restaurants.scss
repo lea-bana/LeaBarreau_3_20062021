@@ -51,25 +51,9 @@
     justify-content: center;
     cursor: pointer;
     position: relative;
-    background-color: black;
-
-    &:hover {
-      opacity: 1;
-      transition: 0.5s;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        0deg,
-        $color-primary 0%,
-        $color-secondary 100%
-      );
-    }
   }
 }
+
 /*fin du btn like- pb à résoudre*/
 
 .submenu {
@@ -94,6 +78,13 @@
     }
   }
 }
+/*media queries presentation du menu en desktop*/
+@media all and (min-width : 1024px) {
+  .submenus {
+    display: flex;
+  justify-content: space-between; }
+}
+
 .menuItem {
   background-color: white;
   padding: 1rem;
@@ -108,6 +99,7 @@
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
+
   /*animation d'apparition + delay - détails menu - cf page animation*/
 
   &__header {
