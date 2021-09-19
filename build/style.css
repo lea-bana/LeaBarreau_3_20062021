@@ -304,7 +304,6 @@ body {
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
-  /*Résoudre le pb du btn like*/
 }
 .menu__header {
   padding: 1rem 2rem 0 1rem;
@@ -339,7 +338,6 @@ body {
   position: relative;
 }
 
-/*fin du btn like- pb à résoudre*/
 .submenu {
   max-width: 100%;
   overflow: hidden;
@@ -606,6 +604,7 @@ p {
   text-decoration: underline;
 }
 
+/*media queries footers */
 @media all and (min-width: 1024px) {
   .footer__list {
     display: flex;
