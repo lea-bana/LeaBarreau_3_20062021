@@ -143,6 +143,9 @@
   color: inherit;
   display: block;
 }
+.card__figure {
+  margin: unset;
+}
 .card__img {
   height: 12rem;
   width: 100%;

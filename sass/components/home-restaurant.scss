@@ -127,6 +127,9 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  &__figure{
+    margin: unset;
+  }
   &__img {
     height: 12rem;
     width: 100%;
