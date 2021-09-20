@@ -557,9 +557,7 @@ body {
 }
 
 .h1 {
-  font-family: "shrikhand", sans-serif;
-  text-align: center;
-  font-size: 2em;
+  color: black;
   font-weight: bolder;
 }
 
