@@ -6,6 +6,14 @@
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
   position: relative;
   z-index: 1000;
+  &__logo{
+    font-family: "shrikhand", sans-serif;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  text-decoration: unset;
+  color: black;
+  }
 }
 .localisation {
   display: flex;

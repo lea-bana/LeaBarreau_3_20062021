@@ -47,7 +47,7 @@
   }
   40% {
     transform: scale(1.4);
-    color:  linear-gradient(to top $color-primary, $color-secondary);
+    color: $color-primary;
   }
   100% {
     transform: scale(1.4);

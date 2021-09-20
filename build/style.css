@@ -8,6 +8,14 @@
   position: relative;
   z-index: 1000;
 }
+.header__logo {
+  font-family: "shrikhand", sans-serif;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  text-decoration: unset;
+  color: black;
+}
 
 .localisation {
   display: flex;
@@ -531,7 +539,7 @@ body {
   }
   40% {
     transform: scale(1.4);
-    color: linear-gradient(to top #9356dc, #ff79da);
+    color: #9356dc;
   }
   100% {
     transform: scale(1.4);
@@ -547,7 +555,7 @@ body {
   height: 100%;
 }
 
-h1 {
+.h1 {
   font-family: "shrikhand", sans-serif;
   text-align: center;
   font-size: 2em;
